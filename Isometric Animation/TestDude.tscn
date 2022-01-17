@@ -1,0 +1,173 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Enemy/Dude.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 4, 1, 4 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0980392, 0.556863, 0.211765, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -2, -0.5, -2, -2, 0.5, -2, 2, -0.5, -2, -2, -0.5, 2, -2, 0.5, 2, 2, 0.5, -2, 2, -0.5, 2, 2, 0.5, 2 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.537255, 0.117647, 0.117647, 1 )
+
+[sub_resource type="CubeMesh" id=8]
+material = SubResource( 7 )
+size = Vector3( 1, 4, 4 )
+
+[sub_resource type="ConvexPolygonShape" id=9]
+points = PoolVector3Array( 0.5, 2, 2, -0.5, 2, 2, 0.5, -2, 2, 0.5, 2, -2, -0.5, 2, -2, -0.5, -2, 2, 0.5, -2, -2, -0.5, -2, -2 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 1, 4, 4 )
+
+[sub_resource type="ConvexPolygonShape" id=11]
+points = PoolVector3Array( 0.5, 2, 2, -0.5, 2, 2, 0.5, -2, 2, 0.5, 2, -2, -0.5, 2, -2, -0.5, -2, 2, 0.5, -2, -2, -0.5, -2, -2 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0.835294, 0.588235, 0.588235, 1 )
+
+[sub_resource type="CubeMesh" id=13]
+material = SubResource( 12 )
+size = Vector3( 6, 4, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=14]
+points = PoolVector3Array( 3, 2, 0.5, 3, 2, -0.5, -3, 2, 0.5, 3, -2, 0.5, 3, -2, -0.5, -3, 2, -0.5, -3, -2, 0.5, -3, -2, -0.5 )
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 0.34902, 0.054902, 0.054902, 1 )
+
+[sub_resource type="CubeMesh" id=16]
+material = SubResource( 15 )
+size = Vector3( 6, 4, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=17]
+points = PoolVector3Array( 3, 2, 0.5, 3, 2, -0.5, -3, 2, 0.5, 3, -2, 0.5, 3, -2, -0.5, -3, 2, -0.5, -3, -2, 0.5, -3, -2, -0.5 )
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 0.631373, 0.698039, 1, 1 )
+
+[sub_resource type="PrismMesh" id=4]
+material = SubResource( 18 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.631373, 0.698039, 1, 1 )
+
+[sub_resource type="PrismMesh" id=5]
+material = SubResource( 3 )
+size = Vector3( 0.4, 0.4, 0.4 )
+
+[sub_resource type="SpatialMaterial" id=19]
+albedo_color = Color( 1, 0.152941, 0.152941, 1 )
+
+[sub_resource type="PrismMesh" id=20]
+material = SubResource( 19 )
+size = Vector3( 0.4, 0.4, 2 )
+
+[sub_resource type="SpatialMaterial" id=21]
+albedo_color = Color( 1, 0.152941, 0.152941, 1 )
+
+[sub_resource type="PrismMesh" id=22]
+material = SubResource( 21 )
+size = Vector3( 0.4, 0.4, 0.4 )
+
+[node name="TestDude" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 0 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1, 0 )
+shape = SubResource( 9 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1, 0 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="CollisionShape3" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1, 0 )
+shape = SubResource( 11 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.5 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.5 )
+shape = SubResource( 14 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.5 )
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="CollisionShape5" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.5 )
+shape = SubResource( 17 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, -6.18172e-08, 0.707107, 0.707107, 6.18172e-08, 0.707107, -0.707107, 0, 8.5, -8.5 )
+
+[node name="zarrow" type="Spatial" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.25, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="zarrow"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -4, 0 )
+mesh = SubResource( 4 )
+skeleton = NodePath("../../StaticBody")
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="zarrow"]
+transform = Transform( 3.53553, 0, -3.53553, 0, 5, 0, 3.53553, 0, 3.53553, 1, 0, 3.5 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../../StaticBody")
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="zarrow"]
+transform = Transform( 3.53553, 0, 3.53553, 0, 5, 0, -3.53553, 0, 3.53553, -1, 0, 3.5 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../../StaticBody")
+material/0 = null
+
+[node name="xarrow" type="Spatial" parent="."]
+transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.25, 0, -0.5, 0, -2.18557e-08, 0, 0, 0 )
+
+[node name="xxarrowmesh" type="MeshInstance" parent="xarrow"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+mesh = SubResource( 20 )
+skeleton = NodePath("../../StaticBody")
+material/0 = null
+
+[node name="xxarrowmesh2" type="MeshInstance" parent="xarrow"]
+transform = Transform( 3.53553, 0, -3.53553, 0, 5, 0, 3.53553, 0, 3.53553, 1, 0, 3.5 )
+mesh = SubResource( 22 )
+skeleton = NodePath("../../StaticBody")
+material/0 = null
+
+[node name="xxarrowmesh3" type="MeshInstance" parent="xarrow"]
+transform = Transform( 3.53553, 0, 3.53553, 0, 5, 0, -3.53553, 0, 3.53553, -1, 0, 3.5 )
+mesh = SubResource( 22 )
+skeleton = NodePath("../../StaticBody")
+material/0 = null
+
+[node name="Dude" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
