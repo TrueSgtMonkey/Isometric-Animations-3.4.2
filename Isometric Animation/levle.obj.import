@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/levle.obj-eb39a12e37b40b95200dcd61a5a343ae.mesh"
+
+[deps]
+
+files=[ "res://.import/levle.obj-eb39a12e37b40b95200dcd61a5a343ae.mesh" ]
+
+source_file="res://levle.obj"
+dest_files=[ "res://.import/levle.obj-eb39a12e37b40b95200dcd61a5a343ae.mesh", "res://.import/levle.obj-eb39a12e37b40b95200dcd61a5a343ae.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

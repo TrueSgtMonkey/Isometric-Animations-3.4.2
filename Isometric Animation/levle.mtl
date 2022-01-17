@@ -1,0 +1,9 @@
+newmtl outer/bug_tex
+map_Kd textures/outer/bug_tex.png
+
+newmtl outer/ground_tex
+map_Kd textures/outer/ground_tex.png
+
+newmtl outer/myoutput
+map_Kd textures/outer/myoutput.png
+
